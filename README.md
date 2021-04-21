@@ -19,7 +19,7 @@
 </h4>
 
 <p align="center">
-	<img src="images/mynto-rewards.png">
+	<img src="images/mynto-rewards.jpg">
 </p>
 
 ---
