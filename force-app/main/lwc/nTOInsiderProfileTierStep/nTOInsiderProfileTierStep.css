@@ -1,0 +1,46 @@
+.tier-step {
+    position: relative;
+    color: #393939;
+    letter-spacing: 2px;
+}
+
+
+.label {
+    position: absolute;
+    top: -25px;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+.completed .label {
+    font-weight: bold;
+}
+
+.circle {
+    border-radius: 50%;
+}
+
+.outer-circle {
+    padding: 6px;
+    background-color: #ffffff;
+}
+
+.inner-circle {
+    height: 8px;
+    width: 8px;
+    background-color: #DDDBDA;
+}
+
+.completed .outer-circle {
+    background-color: #6DCCEE  /**customer secondary color**/;
+}
+
+.completed .inner-circle {
+    background-color: #ffffff;
+}
+
+.points {
+    position: absolute;
+    top: 25px;
+    font-size: 13px;
+}

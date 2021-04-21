@@ -1,0 +1,45 @@
+.title {
+    font-size: 1.375rem;
+}
+
+.nTOInsiderProfileRecentTractions table th div{
+    font-size: 11px;
+    text-transform: uppercase;
+    color: #777777;
+}
+
+.nTOInsiderProfileRecentTractions table th {
+  
+}
+
+tr{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #eeeeee;
+}
+
+tbody tr:nth-child(even) {
+    /*background-color: #EFEFEF;*/
+}
+
+tr td:nth-child(1) {
+    font-size: 16px;
+    letter-spacing:normal;
+}
+
+tr td:nth-child(1), tr th:nth-child(1) {
+    text-align: left;
+}
+
+tbody tr td:nth-child(3) {
+    letter-spacing:2px;
+}
+
+tbody tr td:nth-child(4) {
+    text-align: right;
+    letter-spacing:2px;
+}
+
+ tr th:nth-child(4) {
+    text-align: right;
+}

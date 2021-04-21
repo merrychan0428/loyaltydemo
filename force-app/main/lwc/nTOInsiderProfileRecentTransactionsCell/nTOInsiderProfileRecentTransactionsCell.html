@@ -1,0 +1,12 @@
+<template>
+    <div class="cell">
+        <template if:true={isActivityType}>
+            <c-n-t-o-insider-profile-recent-transactions-cell-activity
+                type={value}
+            ></c-n-t-o-insider-profile-recent-transactions-cell-activity>
+        </template>
+        <template if:false={isActivityType}>
+            <div class="slds-truncate" title={value}>{value}</div>
+        </template>
+    </div>
+</template>

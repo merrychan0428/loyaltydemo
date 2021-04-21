@@ -1,0 +1,18 @@
+<template>
+    <div class="tier-progress">
+        <div class="tier-progress__steps slds-grid slds-grid_align-spread">
+            <template for:each={steps} for:item="step">
+                <c-n-t-o-insider-profile-tier-step
+                    step-label={step.label}
+                    step-points={step.points}
+                    points={currentPoints}
+                    key={step.label}
+                ></c-n-t-o-insider-profile-tier-step>
+            </template>
+     
+        </div>
+        <div class="tier-progress__bar">
+            <lightning-progress-bar value={value} size="medium"></lightning-progress-bar>
+        </div>
+    </div>
+</template>

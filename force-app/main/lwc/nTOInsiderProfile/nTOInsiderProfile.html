@@ -1,0 +1,35 @@
+<!--
+  @description       : 
+  @author            : Salesforce
+  @group             : 
+  @last modified on  : 02-11-2021
+  @last modified by  : Salesforce
+  Modifications Log 
+  Ver   Date         Author       Modification
+  1.0   02-09-2021   Salesforce   Initial Version
+-->
+<template>
+    <div class="nto-insider-profile">
+        <div class="nto-insider-profile__header slds-p-bottom_large">
+            <h1>
+                My Rewards Profile
+            </h1>
+            <div class="nto-insider-profile__header__sub-title">
+                {profileNumber} 
+            </div>
+        </div>
+        <c-n-t-o-insider-profile-points
+            points-balance={pointsBalance}
+            expiring-points={pointsExpiryInfo.points}
+            expiry-date = {pointsExpiryInfo.date}
+            tier-name={tierInfo.name}
+            tier-points={tierInfo.points}
+            tier-steps={tierSteps}
+        ></c-n-t-o-insider-profile-points>
+        <div class="slds-m-top_large">
+            <c-n-t-o-insider-profile-recent-transactions
+            member-id={memberId}
+            ></c-n-t-o-insider-profile-recent-transactions>
+        </div>
+    </div>
+</template>

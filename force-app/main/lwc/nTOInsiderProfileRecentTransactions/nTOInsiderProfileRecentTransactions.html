@@ -1,0 +1,48 @@
+<!--
+  @description       : 
+  @author            : Salesforce
+  @group             : 
+  @last modified on  : 02-08-2021
+  @last modified by  : Salesforce
+  Modifications Log 
+  Ver   Date         Author       Modification
+  1.0   02-08-2021   Salesforce   Initial Version
+-->
+
+<template>
+    <div class="nTOInsiderProfileRecentTractions slds-p-bottom_large slds-p-top_large">
+        <div class="slds-m-bottom_large slds-m-top_large"><h1>Recent Transactions</h1></div>
+        <!-- <lightning-datatable
+            key-field="id"
+            data={recentTransactions.data}
+            columns={columns}
+            hide-checkbox-column
+        ></lightning-datatable> -->
+        <table class="slds-table slds-table_cell-buffer slds-m-bottom_large">
+            <thead>
+              <tr class="slds-line-height_reset">
+                  <template for:each={columns} for:item="column">
+                    <th class="" scope="col" key={column.label}>
+                        <div class="slds-truncate" title={column.label}>{column.label}</div>
+                    </th>
+                  </template>
+              </tr>
+            </thead>
+            <tbody>
+                <template for:each={recentTransactions.data} for:item="row">
+                    <tr class="slds-hint-parent" key={row.id}>
+                        <template for:each={columns} for:item="column">
+                            <td data-label={column.label} key={column.label} class="slds-p-vertical_small">
+                                <c-n-t-o-insider-profile-recent-transactions-cell
+                                    row={row}
+                                    cell={column}
+                                ></c-n-t-o-insider-profile-recent-transactions-cell>
+                              </td>
+                          </template>
+                      </tr>
+                </template>
+               
+            </tbody>
+        </table>
+    </div>
+</template>

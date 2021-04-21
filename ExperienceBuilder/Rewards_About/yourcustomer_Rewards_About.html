@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <!--Include Font Awesome in your sites Header-->
+    <script src="https://kit.fontawesome.com/cd9a495666.js" crossorigin="anonymous"></script>
+
+    <!--Natively in Experience Builder-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="salesforce-lightning-design-system.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="//code.jquery.com/mobile/1.5.0-alpha.1/jquery.mobile-1.5.0-alpha.1.min.js"></script>
+
+
+    <style>
+        /*** paste into CSS Overrides**/
+        .works-description {
+            max-width: 360px;
+            margin: 0 auto;
+        }
+
+        .subtitle {
+            font-weight: bold;
+        }
+
+        .icon-divider {
+            display: flex;
+            flex-direction: row;
+            margin: .5rem;
+        }
+
+        .icon-divider:before,
+        .icon-divider:after {
+            content: "";
+            flex: 1 1;
+            border-bottom: 2px solid #f2f2f2;
+            margin: auto;
+        }
+
+        .icon-divider span {
+            background: #fff;
+            color: #EDEDED;
+            font-size: 36px;
+            padding: 0 20px;
+        }
+
+
+
+        .reward-box {
+            background-color: #f7f7f7;
+            border-radius: 4px;
+        }
+
+        .reward-box .icon {
+            font-size: 36px;
+            color: #0070d2 /**Customer Secondary Color*/;
+        }
+
+        .myNTO_compare {
+            overflow-x: scroll;
+        }
+
+        .myNTO_compare .reward-table {
+            text-align: center;
+        }
+
+        .reward-table tr {
+            border-bottom: 1px solid #ffffff;
+        }
+
+        .reward-table thead tr {
+            border-bottom: 0px solid #ffffff;
+        }
+
+        .reward-table td,
+        .reward-table th {
+            text-align: center;
+            padding: 1.2rem;
+            width: 20%
+        }
+
+
+        .reward-table th {
+            font-size: 16px;
+            color: #393939;
+        }
+
+        .reward-table th .fas {
+            padding-bottom: 10px;
+            font-size: 36px;
+        }
+
+        .reward-table td:nth-child(2),
+        .reward-table th:nth-child(2) {
+            background: #f7f7f7;
+        }
+
+        .reward-table td:nth-child(3),
+        .reward-table th:nth-child(3) {
+            background: #f2f2f2;
+        }
+
+
+        .reward-table td:nth-child(4),
+        .reward-table th:nth-child(4) {
+            background: #EDEDED;
+        }
+
+
+
+        .reward-table th:nth-child(2) .fas {
+            opacity: .3;
+        }
+
+        .reward-table th:nth-child(3) .fas {
+            opacity: .7;
+        }
+
+        .reward-table th:nth-child(4) .fas {
+            opacity: 1;
+        }
+
+
+
+        .reward-table .reward {
+            width: 31%;
+            text-align: left;
+            background: #ffffff;
+        }
+
+        .loyalty_bullet {
+            font-size: 50px;
+            line-height: 1;
+            padding: 0;
+            margin: 0;
+            color: #0070d2 /**Customer Secondary Color*/;
+        }
+
+
+
+        .loyalty_detail {
+            font-weight: bold;
+            color: #0070d2 /**Customer Secondary Color*/;
+        }
+
+
+
+        @media screen and (max-width: 768px) {
+            .reward-table .reward {
+                white-space: normal !important;
+                width: 50%;
+            }
+
+            .reward-table td:nth-child(4),
+            .reward-table th:nth-child(4) {
+                padding-right: .5rem !important;
+            }
+
+        }
+
+        @media screen and (min-width: 768px) {
+            .desktop-border-left {
+                border-left: 2px solid #f2f2f2;
+            }
+        }
+
+    </style>
+
+
+</head>
+
+
+<body>
+
+
+    <div class="slds-container_large slds-container_center slds-text-align_center">
+
+        <!--how it works-->
+        <div class="slds-p-around_x-large">
+            <h1><b>How it works:</b></h1>
+            <p>myNTO Rewards is Northern Trail Outfitter’s exclusive loyalty program. It’s your chance to earn points and rewards, get early access to new arrivals, enjoy member-only sales and perks, and much more!</p>
+        </div>
+        <div class="slds-grid slds-wrap slds-grid_vertical-align-center slds-gutters">
+            <div class="slds-size_1-of-1 slds-large-size_1-of-2">
+                <div class="slds-text-align_center slds-p-around_large works-description">
+                    <div class="subtitle">SHOP NTO</div>
+                    <p>Shop with NTO and earn points on every purchase. Get 5 points for every dollar you spend.</p>
+                </div>
+            </div>
+            <div class="slds-size_1-of-1 slds-large-size_1-of-2 desktop-border-left">
+                <div class="slds-text-align_center slds-p-around_large works-description">
+                    <div class="subtitle">TRACK YOUR PROGRESS</div>
+                    <p>Access myNTO rewards details and keep track of your progress towards the next tier.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="icon-divider slds-show_medium">
+            <span><i class="fas fa-award"></i></span>
+        </div>
+
+
+        <div class="slds-grid slds-wrap slds-grid_vertical-align-center slds-gutters">
+            <div class="slds-size_1-of-1 slds-large-size_1-of-2">
+                <div class="slds-text-align_center slds-p-around_large works-description">
+                    <div class="subtitle">EARN POINTS</div>
+                    <p>More points = more rewards! You’ll have the chance to earn points even faster on special promotions and offers.</p>
+                </div>
+            </div>
+            <div class="slds-size_1-of-1 slds-large-size_1-of-2 desktop-border-left">
+                <div class="slds-text-align_center slds-p-around_large works-description">
+                    <div class="subtitle">GET REWARDS</div>
+                    <p>Treat yourself! Redeem your hard-earned points for exclusive rewards throughout the year.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="slds-p-around_x-large slds-text-align_center">
+            <a class="slds-button slds-button_brand" href="/s/login/SelfRegister" style="color: #ffffff">JOIN NOW</a>
+        </div>
+
+        <div class="icon-divider slds-hide_medium">
+            <span><i class="fas fa-award"></i></span>
+        </div>
+
+
+
+        <!--/end how it works-->
+
+
+        <!--what you'll earn-->
+        <div class="slds-grid slds-wrap slds-grid_vertical-align-center">
+            <div class="slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-3 slds-p-around_large">
+
+                <div class="reward-box">
+                    <div class="slds-text-align_center slds-p-around_large">
+                        <div class="icon"><i class="fas fa-birthday-cake"></i></div>
+                        <div class="subtitle slds-p-top_small"><strong>BIRTHDAY GIFT</strong></div>
+                        <p>What’s even better than cake? A $10 birthday gift just for you!</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-3 slds-p-around_large">
+                <div class="reward-box">
+                    <div class="slds-text-align_center slds-p-around_large">
+                        <div class="icon"><i class="far fa-calendar-check"></i></div>
+                        <div class="subtitle slds-p-top_small"><strong>EARLY ACCESS</strong></div>
+                        <p>You'll be the first to hear about<br>
+                            new arrivals and our biggest sales.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-3 slds-p-around_large">
+
+                <div class="reward-box">
+                    <div class="slds-text-align_center slds-p-around_large">
+                        <div class="icon"><i class="fas fa-tags"></i></div>
+                        <div class="subtitle slds-p-top_small"><strong>MEMBER-ONLY OFFERS</strong></div>
+                        <p>Being a myNTO member pays off<br>
+                            with extra discounts and offers.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-3 slds-p-around_large">
+
+                <div class="reward-box">
+                    <div class="slds-text-align_center slds-p-around_large">
+                        <div class="icon"><i class="fas fa-star-half-alt"></i></div>
+                        <div class="subtitle slds-p-top_small"><strong>POINT MULTIPLIER DAYS</strong></div>
+                        <p>Earn points even faster on 2x and 3x<br>
+                            point multiplier days.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-3 slds-p-around_large">
+                <div class="reward-box">
+                    <div class="slds-text-align_center slds-p-around_large">
+                        <div class="icon"><i class="fas fa-campground"></i></div>
+                        <div class="subtitle slds-p-top_small"><strong>MEET &amp; GREET</strong></div>
+                        <p>Learn from the pros when you get<br>
+                            to meet top our top contributors.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-3 slds-p-around_large">
+                <div class="reward-box">
+                    <div class="slds-text-align_center slds-p-around_large">
+                        <div class="icon"><i class="fas fa-gift"></i></div>
+                        <div class="subtitle slds-p-top_small"><strong>NTO MERCH</strong></div>
+                        <p>Free NTO branded swag items,<br>
+                            need we say more?!</p>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+
+
+        <!--/end what you'll earn-->
+
+
+
+    </div>
+
+
+
+
+    <!--compare v1-->
+    <div class="myNTO_compare slds-p-top_x-large">
+
+        <div class="slds-container_x-large slds-container_center">
+
+            <table class="slds-table slds-table_cell-buffer slds-no-row-hover reward-table">
+                <thead>
+                    <tr class="slds-line-height_reset">
+                        <th class="reward" scope="col">
+
+                        </th>
+                        <th class="" scope="col">
+                            <div title="Silver" class="slds-p-bottom_small slds-p-top_large"><i class="fas fa-award"></i>
+                                <br>Silver</div>
+                        </th>
+                        <th class="" scope="col">
+                            <div title="Gold" class="slds-p-bottom_small slds-p-top_large"><i class="fas fa-award"></i>
+                                <br>Gold</div>
+                        </th>
+                        <th class="" scope="col">
+                            <div title="Platinum" class="slds-p-bottom_small slds-p-top_large"><i class="fas fa-award"></i>
+                                <br>Platinum</div>
+                        </th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="slds-hint-parent">
+                        <td class="reward">Early access to new arrivals & sales</td>
+                        <td data-label="Silver">
+                            <span class="loyalty_bullet">•</span>
+                        </td>
+                        <td data-label="Gold">
+                            <span class="loyalty_bullet">•</span>
+                        </td>
+                        <td data-label="Platinum">
+                            <span class="loyalty_bullet">•</span>
+                        </td>
+                    </tr>
+                    <tr class="slds-hint-parent">
+                        <td class="reward">Free shipping & handling</td>
+                        <td data-label="Silver">
+                            <span class="loyalty_bullet">•</span>
+                        </td>
+                        <td data-label="Gold">
+                            <span class="loyalty_bullet">•</span>
+                        </td>
+                        <td data-label="Platinum">
+                            <span class="loyalty_bullet">•</span>
+                        </td>
+                    </tr>
+                    <tr class="slds-hint-parent">
+                        <td class="reward">Birthday gift</td>
+                        <td data-label="Silver">
+                            <span class="loyalty_bullet">•</span>
+                        </td>
+                        <td data-label="Gold">
+                            <span class="loyalty_bullet">•</span>
+                        </td>
+                        <td data-label="Platinum">
+                            <span class="loyalty_bullet">•</span>
+                        </td>
+                    </tr>
+
+                    <tr class="slds-hint-parent">
+                        <td class="reward">Rewards for your BFFs</td>
+                        <td data-label="Silver">
+                            <span class="loyalty_bullet">•</span>
+                        </td>
+                        <td data-label="Gold">
+                            <span class="loyalty_bullet">•</span>
+                        </td>
+                        <td data-label="Platinum">
+                            <span class="loyalty_bullet">•</span>
+                        </td>
+                    </tr>
+
+                    <tr class="slds-hint-parent">
+                        <td class="reward">Member-only discounts</td>
+                        <td data-label="Silver">
+                            <span class="loyalty_bullet">•</span>
+                        </td>
+                        <td data-label="Gold">
+                            <span class="loyalty_bullet">•</span>
+                        </td>
+                        <td data-label="Platinum">
+                            <span class="loyalty_bullet">•</span>
+                        </td>
+                    </tr>
+                    <tr class="slds-hint-parent">
+                        <td class="reward">Point multiplier days</td>
+                        <td data-label="Silver">
+                            <span class="loyalty_detail">2X</span>
+                        </td>
+                        <td data-label="Gold">
+                            <span class="loyalty_detail">2X</span>
+                        </td>
+                        <td data-label="Platinum">
+                            <span class="loyalty_detail">3X</span>
+                        </td>
+                    </tr>
+                    <tr class="slds-hint-parent">
+                        <td class="reward">Free NTO Merchandise</td>
+                        <td data-label="Silver">
+
+                        </td>
+                        <td data-label="Gold">
+                            <span class="loyalty_bullet">•</span>
+                        </td>
+                        <td data-label="Platinum">
+                            <span class="loyalty_bullet">•</span>
+                        </td>
+                    </tr>
+                    <tr class="slds-hint-parent">
+                        <td class="reward">Member-only classes & workshops</td>
+                        <td data-label="Silver">
+
+                        </td>
+                        <td data-label="Gold">
+                            <span class="loyalty_bullet">•</span>
+                        </td>
+                        <td data-label="Platinum">
+                            <span class="loyalty_bullet">•</span>
+                        </td>
+                    </tr>
+                    <tr class="slds-hint-parent">
+                        <td class="reward">NTO Ambassadors meet & greet</td>
+                        <td data-label="Silver">
+
+                        </td>
+                        <td data-label="Gold">
+                            <span class="loyalty_bullet">•</span>
+                        </td>
+                        <td data-label="Platinum">
+                            <span class="loyalty_bullet">•</span>
+                        </td>
+                    </tr>
+                    <tr class="slds-hint-parent">
+                        <td class="reward">National Park Journal subscription</td>
+                        <td data-label="Silver">
+
+                        </td>
+                        <td data-label="Gold">
+                            <span class="loyalty_bullet">•</span>
+                        </td>
+                        <td data-label="Platinum">
+                            <span class="loyalty_bullet">•</span>
+                        </td>
+                    </tr>
+                    <tr class="slds-hint-parent">
+                        <td class="reward">MapMyHike subscription</td>
+                        <td data-label="Silver">
+
+                        </td>
+                        <td data-label="Gold">
+
+                        </td>
+                        <td data-label="Platinum">
+                            <span class="loyalty_bullet">•</span>
+                        </td>
+                    </tr>
+
+                    <tr class="slds-hint-parent">
+                        <td class="reward">Free pass to an NTO Expedition</td>
+                        <td data-label="Silver">
+
+                        </td>
+                        <td data-label="Gold">
+
+                        </td>
+                        <td data-label="Platinum">
+                            <span class="loyalty_bullet">•</span>
+                        </td>
+                    </tr>
+                    <tr class="slds-hint-parent">
+                        <td class="reward">Priority customer service</td>
+                        <td data-label="Silver">
+
+                        </td>
+                        <td data-label="Gold">
+
+                        </td>
+                        <td data-label="Platinum">
+                            <span class="loyalty_bullet">•</span>
+                        </td>
+                    </tr>
+                    <tr class="slds-hint-parent">
+                        <td class="reward">Extended Returns</td>
+                        <td data-label="Silver">
+
+                        </td>
+                        <td data-label="Gold">
+
+                        </td>
+                        <td data-label="Platinum">
+                            <span class="loyalty_bullet">•</span>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
