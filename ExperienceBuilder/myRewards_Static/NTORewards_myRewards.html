@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <!--these are natively in Experience Builder-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="salesforce-lightning-design-system.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="//code.jquery.com/mobile/1.5.0-alpha.1/jquery.mobile-1.5.0-alpha.1.min.js"></script>
+
+
+    <style>
+    /**Add to CSS Overrides in Experience Builder**/
+    .nto-insider-profile-points {
+        flex-wrap: wrap;
+        background-color: #F8F8F8;
+    }
+    
+    .nto-insider-profile-points__regular {
+        background-color: #F8F8F8;
+    }
+    
+    
+    .lable {
+        font-size: 0.875rem;
+    }
+    
+    .value {
+        font-size: 2.125rem;
+        color: #097FB3 /*customer primary color*/;
+    }
+    
+    .text-thin{
+        font-weight: 200 !important;
+        font-family: 'Salesforce Sans', Helvetica, 'Source Sans', sans-serif;
+    }
+    
+    .hr {
+        width: 80%;
+        height: 1px;
+        background-color: #ffffff;
+    }
+    
+    
+    .mtns {
+        margin: 0px 0px 0px -54px;
+        width: 100%;
+    
+    }
+    
+    .mtns img {
+        width: 65px;
+        display: inline-block;
+        margin: auto;
+    }
+
+    .slds-button_brand, .slds-button--brand{
+        background-color:#097FB3 /*customer primary color*/;
+        border-color:#097FB3 /*customer primary color*/;
+    }
+    
+    /* Change the image src to be your customer's icon */
+    .Gold{
+        background: url(https://rcg-ido.s3.us-east-2.amazonaws.com/myNTO_gold_icon.png) no-repeat;
+        background-size: contain;
+        width: 52px;
+        height: 80px;
+    }
+    .Silver{
+        background: url(https://rcg-ido.s3.us-east-2.amazonaws.com/myNTO_silver_icon.png) no-repeat center;
+        background-size: contain;
+        width: 52px;
+        height: 80px;
+    }
+    .Platinum{
+        background: url(https://rcg-ido.s3.us-east-2.amazonaws.com/myNTO_platinum_icon.png) no-repeat center;
+        background-size: contain;
+        width: 80px;
+        height:70px;
+    }
+    
+    /* Or use this to style badges */
+    .tier-badge {
+        border:1px solid #097FB3 /*customer primary color*/;
+        color: #097FB3 /*customer primary color*/;
+        text-transform: uppercase;
+        font-size: 0.8rem;
+        border-radius:20px;
+        padding:3px 7px;
+    }
+    
+    .nto-insider-profile-points__tier {
+        height: 100%;
+        background-color: #D6F0FA;
+    }
+
+
+.tier-progress {
+    position: relative;
+    margin: 30px 20px 30px;
+}
+
+.tier-progress__steps {
+    position: relative;
+    z-index: 1;
+}
+
+.tier-progress__bar {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    margin-top: -4px;
+    padding: 0 2px;
+}
+
+.tier-step {
+    position: relative;
+    color: #393939;
+    letter-spacing: 2px;
+}
+
+
+.label {
+    position: absolute;
+    top: -25px;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+.completed .label {
+    font-weight: bold;
+}
+
+.circle {
+    border-radius: 50%;
+}
+
+.outer-circle {
+    padding: 6px;
+    background-color: #ffffff;
+}
+
+.inner-circle {
+    height: 8px;
+    width: 8px;
+    background-color: #DDDBDA;
+}
+
+.completed .outer-circle {
+    background-color: #6DCCEE  /**customer secondary color**/;
+}
+
+.completed .inner-circle {
+    background-color: #ffffff;
+}
+
+.points {
+    position: absolute;
+    top: 25px;
+    font-size: 13px;
+}
+
+    </style>
+
+
+</head>
+
+
+<body style="background: #ffffff">
+
+    <div class="slds-container_large slds-container_center ">
+
+        <!--profile-->
+        <div class="nto-insider-profile">
+            <div class="nto-insider-profile__header slds-p-bottom_large">
+                <h1>
+                    My Rewards Profile
+                </h1>
+                <div class="nto-insider-profile__header__sub-title">
+                    {profileNumber} 
+                </div>
+            </div>
+
+            <div class="nto-insider-profile-points slds-grid  slds-grid_vertical-align-top">
+                <div class="nto-insider-profile-points__regular slds-col slds-size_1-of-1 slds-medium-size_4-of-12 slds-p-around_large ">
+                    <div class="value slds-text-heading_large"><strong>100</strong></div>
+                    <div class="slds-m-bottom_small slds-text-heading_large text-thin">Reward Points</div>
+                    <!--update to match customer's loyalty program-->
+                    <p class="slds-text-heading_small">1000 points = $5. <br>Redeem in checkout.</p>
+                    <div class="slds-p-top_large"><a class="slds-button slds-button_brand" href="https://www.northerntrailoutfitters.com/default/homepage">SHOP NOW</a></div>
+        
+                </div>
+                <div class="nto-insider-profile-points__tier slds-col slds-size_1-of-1 slds-medium-size_8-of-12 slds-p-horizontal_large slds-p-top_large">
+        
+                    <div class="nto-insider-profile-points__tier__header slds-grid slds-grid_vertical-align-center">
+                        <div class="title slds-col">
+                            <div class="value slds-text-heading_large"><strong>Silver</strong></div>
+                            <div class="slds-m-bottom_small slds-text-heading_large text-thin">Tier</div>
+        
+                        </div>
+
+                        <div class="actions slds-no-flex tier-icon">
+                            <div class="Silver"></div>
+                            <!--badge
+                            <div class="tier-badge">
+                                <div class="tier-points-badge">
+                                    Silver
+                                </div>
+                            </div>-->
+                        </div>
+                    </div>
+
+
+                    <div class="tier__info slds-p-top_large">
+  <div class="tier-progress">
+        <div class="tier-progress__steps slds-grid slds-grid_align-spread">
+                    <div class="tier-step slds-grid slds-grid_vertical slds-grid_vertical-align-center completed">
+                        <div class="label">Silver</div>
+                        <div class="step-indicator">
+                            <div  class="circle outer-circle">
+                                <div class="circle inner-circle">&nbsp;</div>
+                            </div>
+                        </div>
+                        <div class="points">0pts</div>
+                    </div>
+                    <div class="tier-step slds-grid slds-grid_vertical slds-grid_vertical-align-center">
+                        <div class="label">Gold</div>
+                        <div class="step-indicator">
+                            <div class="circle outer-circle">
+                                <div class="circle inner-circle">&nbsp;</div>
+                            </div>
+                        </div>
+                        <div class="points">1000pts</div>
+                    </div>
+                <div class="tier-step slds-grid slds-grid_vertical slds-grid_vertical-align-center">
+                    <div class="label">Platinum</div>
+                    <div class="step-indicator">
+                        <div class="circle outer-circle">
+                            <div class="circle inner-circle">&nbsp;</div>
+                        </div>
+                    </div>
+                    <div class="points">20000pts</div>
+                </div>
+            </div>
+            <div class="tier-progress__bar">
+                <div aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" role="progressbar" class="slds-progress-bar slds-progress-bar_medium">
+                    <span class="slds-progress-bar__value" style="width: 0%;"><span class="slds-assistive-text">Progress 0%</span></span></div></div></div>
+          
+        </div>
+    </div> 
+ </div>
+                 
+ </div>
+        
+            </div>
+            <div class="slds-m-top_large">
+                <c-n-t-o-insider-profile-recent-transactions
+                member-id={memberId}
+                ></c-n-t-o-insider-profile-recent-transactions>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
