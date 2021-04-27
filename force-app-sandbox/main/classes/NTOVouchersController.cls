@@ -5,8 +5,8 @@ public without sharing class NTOVouchersController {
 Voucher is the name of our new object
 */
 @AuraEnabled(cacheable=true)
-    public static List<Voucher__c> getVouchers() {
-        List<Voucher__c> vouchers = new List<Voucher__c>();
+    public static List<Voucher> getVouchers() {
+        List<Voucher> vouchers = new List<Voucher>();
         MemberProfile profileDetails = NTOProfilePointsController.getMemberDetails();
         String programMemberId = '';
 
@@ -16,11 +16,11 @@ Voucher is the name of our new object
             //Just for testing
             // System.debug('Error: No Member Found')
             // return null;
-            programMemberId = '0lM3m000000004cEAA';
+            programMemberId = '0lM3m0000000006EAA';
         }
 
         try{ 
-            vouchers = [ SELECT Name, VoucherCode__c, ExpirationDate__c, Discount_Code_c__c, Description__c, Type__c FROM Voucher__c WHERE LoyaltyProgramMemberId__c = :programMemberId LIMIT 5];
+            vouchers = [ SELECT Name, VoucherCode, VoucherDefinitionId, ExpirationDate, VoucherDefinition.Name, VoucherDefinition.Type, VoucherDefinition.Description, Discount_Code__c FROM Voucher WHERE LoyaltyProgramMemberId = :programMemberId LIMIT 5];
             // System.debug(vouchers.size());
             // System.debug(vouchers);
             return vouchers; 

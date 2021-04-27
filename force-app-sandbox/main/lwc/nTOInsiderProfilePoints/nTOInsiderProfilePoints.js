@@ -1,5 +1,5 @@
 import { LightningElement, api } from 'lwc';
-//import NTOProfileResources from '@salesforce/resourceUrl/ntoprofile';
+import NTOProfileResources from '@salesforce/resourceUrl/ntoprofile';
 
 export default class NTOInsiderProfilePoints extends LightningElement {
     @api pointsBalance = 0;

@@ -1,0 +1,13 @@
+.nto-insider-profile {
+  
+}
+.nto-insider-profile__header__title {
+    color: #393939;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+.nto-insider-profile__header__sub-title {
+    color: #393939;
+    font-size: 0.875rem;
+    letter-spacing: 2px;
+}

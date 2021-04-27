@@ -1,0 +1,22 @@
+:host {
+    /**customer's primary color**/
+    --lwc-progressBarColorBackgroundFill: #6DCCEE;
+}
+
+.tier-progress {
+    position: relative;
+    margin: 30px 20px 30px;
+}
+
+.tier-progress__steps {
+    position: relative;
+    z-index: 1;
+}
+
+.tier-progress__bar {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    margin-top: -4px;
+    padding: 0 2px;
+}

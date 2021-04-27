@@ -1,0 +1,45 @@
+<!--
+  @description       : 
+  @author            : Salesforce
+  @group             : 
+  @last modified on  : 02-12-2021
+  @last modified by  : Salesforce
+  Modifications Log 
+  Ver   Date         Author       Modification
+  1.0   02-09-2021   Salesforce   Initial Version
+-->
+<template>
+    <div class="nto-insider-profile-points slds-grid  slds-grid_vertical-align-top">
+        <div class="nto-insider-profile-points__regular slds-col slds-size_1-of-1 slds-medium-size_4-of-12 slds-p-around_large ">
+            <div class="value slds-text-heading_large"><strong>{pointsBalance}</strong></div>
+            <div class="slds-m-bottom_small slds-text-heading_large text-thin">Reward Points</div>
+            <!--update to match customer's loyalty program-->
+            <p class="slds-text-heading_small">1000 points = $5. <br>Redeem in checkout.</p>
+            <div class="slds-p-top_large"><a class="slds-button slds-button_brand" href="https://www.northerntrailoutfitters.com/default/homepage">SHOP NOW</a></div>
+
+        </div>
+        <div class="nto-insider-profile-points__tier slds-col slds-size_1-of-1 slds-medium-size_8-of-12 slds-p-horizontal_large slds-p-top_large">
+
+            <div class="nto-insider-profile-points__tier__header slds-grid slds-grid_vertical-align-center">
+                <div class="title slds-col">
+                    <div class="value slds-text-heading_large"><strong>{tierName}</strong></div>
+                    <div class="slds-m-bottom_small slds-text-heading_large text-thin">Tier</div>
+
+                </div>
+                <div class="actions slds-no-flex tier-icon">
+                    <div class={tierName}></div>
+                    
+                </div>
+            </div>
+            <div class="tier__info slds-p-top_large">
+                <c-n-t-o-insider-profile-tier-progress current-points={tierPoints} steps={tierSteps}></c-n-t-o-insider-profile-tier-progress>
+            </div>
+            <!--optional mountains-->
+            <div class="mtns">
+                <img src="https://rcg-ido.s3.us-east-2.amazonaws.com/mtns_loyalty_img.png">
+            </div>
+
+        </div>
+
+    </div>
+</template>

@@ -1,0 +1,53 @@
+<template>
+    <div class="slds-grid slds-wrap slds-grid_vertical-align-center">
+<template if:false={ifHasVoucher}>
+        <div class="empty-voucher">
+    <a href="/s/mynto-loyalty-program">
+    <div class="slds-text-align_center slds-p-around_large">
+        <img src="https://rcg-ido.s3.us-east-2.amazonaws.com/empty_rewards_icon.png"> 
+        <div class="subtitle slds-p-top_small">
+            <strong>More points, more rewards!</strong>
+           </div>
+           <p>
+            Learn how to earn the most points that get you rewards you will love!
+           </p>
+        </div>
+    </a>
+</div>
+    </template>
+
+    
+    <template for:each={vouchers} for:item="voucher">
+        <div class="voucher" key={voucher.Name}>
+            <div class="slds-text-align_center slds-p-around_large">
+             
+                    <div class="voucher_icon">
+                        <!-- <img src="https://rcg-ido.s3.us-east-2.amazonaws.com/birthday_rewards_icon.png"> -->
+                        <img src={voucher.image}> 
+                    </div>
+              
+                <div class="name">
+                    <h1>{voucher.VoucherDefinition.Name}</h1>
+                </div>
+                <div class="desc">
+                    {voucher.VoucherDefinition.Description}
+                </div>
+
+                <div class="redeem slds-p-top_large">
+                    <div class="title">
+                        PROMO CODE</div>
+                    <div class="code">
+                        {voucher.Discount_Code__c}</div>
+                </div>
+                <div class="exp">
+                    EXPIRES: <lightning-formatted-date-time value={voucher.ExpirationDate}></lightning-formatted-date-time></p>
+                   
+                </div>
+            </div>
+            <div class="left-chad"></div>
+            <div class="right-chad"></div>
+        </div>
+
+    </template>
+</div>
+</template>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>MemberProfile</members>
+        <members>NTOProfilePointsController</members>
+        <members>NTORecentTransactionsController</members>
+        <members>TransactionSummary</members>
+        <members>NTOVouchersController</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
+        <members>nTOInsiderProfile</members>
+        <members>nTOInsiderProfilePoints</members>
+        <members>nTOInsiderProfileRecentTransactions</members>
+        <members>nTOInsiderProfileRecentTransactionsCell</members>
+        <members>nTOInsiderProfileRecentTransactionsCellActivity</members>
+        <members>nTOInsiderProfileTierProgress</members>
+        <members>nTOInsiderProfileTierStep</members>
+        <members>nTOVoucher</members>
+        <name>LightningComponentBundle</name>
+    </types>
+    <version>51.0</version>
+</Package>
