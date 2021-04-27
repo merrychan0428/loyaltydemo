@@ -11,7 +11,7 @@
         <members>nTOInsiderProfilePoints</members>
         <members>nTOInsiderProfileTierProgress</members>
         <members>nTOInsiderProfileTierStep</members>
-        <members>nTOInsiderProfileTierStep</members>
+        <members>nTOVoucher</members>
         <name>LightningComponentBundle</name>
     </types>
     <version>51.0</version>

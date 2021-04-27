@@ -34,7 +34,7 @@ export default class NTOVoucher extends LightningElement {
             if (result) {
                 //this.vouchers = data;
                 this.vouchers = JSON.parse(JSON.stringify(result));
-                this.vouchers.forEach(voucher => voucher.image = this.getVoucherImage(voucher.VoucherDefinition.Type));
+                this.vouchers.forEach(voucher => voucher.image = this.getVoucherImage(voucher.Type__c));
             } else {
                 alert('error');
             }

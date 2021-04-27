@@ -42,7 +42,8 @@ Use this highly customisable component to show a connected customer experience t
 
 There are a few items you need to setup before installing:
 
-1. You will need to have Loyalty Management working in your org for the LWCs to work correctly. See more here: 
+1. You will need to have Loyalty Management working in your org for the Sandbox LWCs to work correctly. 
+2. If you do not have Loyalty Management in your org, please create 4 new objects using the data in the objects folder. 
 
 ### Install
 
@@ -75,7 +76,7 @@ sfdx force:org:open --targetusername "OrgAlias"
 
 ## Usage
 
-There are 8 Lightning Components & 5 Apex Classes included in the NTO Rewards Portal:
+There are 5 Lightning Components & 3 Apex Classes included in the NTO Rewards Portal:
 - **[NTO Rewards Portal](#NTO Rewards Portal)** 
 
 There are 3 static Experience Builder Components
@@ -89,9 +90,7 @@ Ensure your community user has access to following Apex Classes
 
 - MemberProfile.cls
 - NTOProfilePointsController.cls
-- NTORecentTransactionsController.cls
 - NTOVouchersController.cls
-- TransactionSummary.cls
 
 ---
 

@@ -18,7 +18,7 @@
 
     
     <template for:each={vouchers} for:item="voucher">
-        <div class="voucher" key={voucher.Name}>
+        <div class="voucher" key={voucher.Name__c}>
             <div class="slds-text-align_center slds-p-around_large">
              
                     <div class="voucher_icon">
@@ -27,10 +27,10 @@
                     </div>
               
                 <div class="name">
-                    <h1>{voucher.VoucherDefinition.Name}</h1>
+                    <h1>{voucher.Name__c}</h1>
                 </div>
                 <div class="desc">
-                    {voucher.VoucherDefinition.Description}
+                    {voucher.Description__c}
                 </div>
 
                 <div class="redeem slds-p-top_large">
@@ -40,7 +40,7 @@
                         {voucher.Discount_Code__c}</div>
                 </div>
                 <div class="exp">
-                    EXPIRES: <lightning-formatted-date-time value={voucher.ExpirationDate}></lightning-formatted-date-time></p>
+                    EXPIRES: <lightning-formatted-date-time value={voucher.ExpirationDate__c}></lightning-formatted-date-time></p>
                    
                 </div>
             </div>
